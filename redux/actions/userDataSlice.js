@@ -6,9 +6,7 @@ const initialState = {
 export const getAllDataAsync = createAsyncThunk(
   'UserData/getAllData',
   async () => {
-    console.log("called async fun")
     const response = await getAllData ();
-    console.log(response,"response")
     // The value we return becomes the `fulfilled` action payload
     return response;
   }
@@ -30,7 +28,6 @@ const userDataSlice = createSlice({
       })
       .addCase(getAllDataAsync.fulfilled, (state, action) => {
         state.status = 'idle';
-        console.log("hey chck")
         state.data = action.payload;
       })
     }

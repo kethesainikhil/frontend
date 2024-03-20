@@ -3,7 +3,7 @@ import React from 'react'
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllDataAsync } from '../../redux/actions/userDataSlice';
-
+import "../../styles/Home.module.css"
 const Table = () => {
     const userdata = useSelector((state) => state.userData.data)
     const dispatch =  useDispatch()
@@ -16,23 +16,24 @@ const Table = () => {
 	<h2 className="mb-4 text-2xl font-semibold leading-tight">Contacts</h2>
 	<div className="overflow-x-auto">
 		<table className="w-full p-6 text-xs text-left whitespace-nowrap">
-			<colgroup>
-				<col className="w-5" />
+			{/* <colgroup>
+				<col className="" />
 				<col />
 				<col />
 				<col />
 				<col />
 				<col />
 				<col className="w-5" />
-			</colgroup>
+			</colgroup> */}
 			<thead className='text-center'>
 				<tr className="dark:bg-gray-700">
-					<th className="p-3">index</th>
+					<th className="p-3">ID</th>
 					<th className="p-3">UserName</th>
 					<th className="p-3">Language</th>
 					<th className="p-3">Stdin</th>
 					<th className="p-3">Sourcecode</th>
 					<th className="p-3">TimeStamp</th>
+					<th className="p-3">Execute</th>
 				</tr>
 			</thead>
             {
@@ -51,11 +52,14 @@ const Table = () => {
 					<td className="px-3 py-2">
 						<p>{data.stdin}</p>
 					</td>
-					<td className="px-3 py-2">
+					<td className="px-3 py-2 max-w-xs truncate">
 						<p>{data.sourcecode}</p>
 					</td>
 					<td className="px-3 py-2">
 						<p className="dark:text-gray-400">{data.timestamp}</p>
+					</td>
+					<td className="px-3 py-2">
+						<button onClick={() => console.log(data.id)} className="text-green-500 ">-&gt;</button>
 					</td>
 				</tr>
                 </tbody>

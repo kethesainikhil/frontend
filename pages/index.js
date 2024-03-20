@@ -2,6 +2,7 @@ import React from 'react'
 import {useRouter} from 'next/navigation'
 import Link from 'next/link'
 const Home = () => {
+
 console.log(process.env.backendurl);
   return (
     <div className='flex flex-col justify-center my-40 items-center text-center'>

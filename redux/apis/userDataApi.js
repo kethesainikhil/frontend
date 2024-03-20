@@ -8,7 +8,6 @@ export function getAllData() {
             }
             const data = await response.json();
             resolve(data);
-            console.log(data, "data in api");
           })
           .catch(error => {
             // Handle fetch error
