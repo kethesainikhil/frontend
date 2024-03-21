@@ -37,15 +37,15 @@ console.log(data, "data")
     <div>
       <form className='grid text-center grid-cols-1 items-center justify-center' onSubmit={handleSubmit(onSubmit)} action="">
         <div className='my-10'>
-          <label htmlFor="username">User Name</label>
-          <input className='px-10' {...register("username")} type="text" placeholder='username' />
+          <label className='px-10' htmlFor="username">User Name</label>
+          <input className='px-10 py-2' {...register("username")} type="text" placeholder='username' />
         </div>
         <div className='mb-10'>
           <textarea className='border-2 border-black p-3' {...register("stdin")} name="stdin" id="stdin" cols="90" rows="10" placeholder='enter your stdin input here'></textarea>
         </div>
         <div className='mb-10'>
-          <label htmlFor="language">Language</label>
-          <select className='px-10' {...register("language")} name="language" id="language">
+          <label className='mx-10' htmlFor="language">Language</label>
+          <select className='px-10 py-2' {...register("language")} name="language" id="language">
             <option value="c++">c++</option>
             <option value="java">java</option>
             <option value="javascript">javascript</option>
@@ -55,7 +55,9 @@ console.log(data, "data")
         <div className=''>
           <textarea className='border-2 border-black p-3' {...register("sourcecode")} name="sourcecode" id="sourcecode" cols="90" rows="30" placeholder='enter your source code here'></textarea>
         </div>
-        <button type='submit'>Submit</button>
+        <div className='border-4 hover:bg-green-600 w-fit px-6 py-3 text-center mx-auto'>
+        <button  type='submit'>Submit</button>
+        </div>
       </form>
       <div>
       </div>

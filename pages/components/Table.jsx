@@ -71,8 +71,22 @@ const Table =  () => {
 					<td className="px-3 py-2">
 						<p className="dark:text-gray-400">{data.timestamp}</p>
 					</td>
-					<td className="px-3 py-2">
-						<button onClick={()=>handleSubmit(data.id)} className="text-green-500 ">-&gt;</button>
+					<td className="px-3 py-2 flex justify-center">
+						<button onClick={()=>handleSubmit(data.id)} className="flex hover:bg-transparent items-center justify-center px-4 py-2 bg-blue-500 text-white rounded-md focus:outline-none focus:bg-blue-600">
+      <svg fill="#fdfcfc" height="20px" width="20px" viewBox="-6 -6 72.00 72.00">
+        {/* SVG Content */}
+        <g id="SVGRepo_bgCarrier" strokeWidth="0" transform="translate(0.9000000000000021,0.9000000000000021), scale(0.97)">
+          <rect x="-6" y="-6" width="72.00" height="72.00" rx="36" fill="#00db1a" strokeWidth="0"></rect>
+        </g>
+        <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" stroke="#CCCCCC" strokeWidth="0.12"></g>
+        <g id="SVGRepo_iconCarrier">
+          <g>
+            <path d="M45.563,29.174l-22-15c-0.307-0.208-0.703-0.231-1.031-0.058C22.205,14.289,22,14.629,22,15v30 c0,0.371,0.205,0.711,0.533,0.884C22.679,45.962,22.84,46,23,46c0.197,0,0.394-0.059,0.563-0.174l22-15 C45.836,30.64,46,30.331,46,30S45.836,29.36,45.563,29.174z M24,43.107V16.893L43.225,30L24,43.107z"></path>
+            <path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30 S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"></path>
+          </g>
+        </g>
+      </svg>
+    </button>
 					</td>
 				</tr>
                 </tbody>

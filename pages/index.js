@@ -5,9 +5,9 @@ const Home = () => {
 
 console.log(process.env.backendurl);
   return (
-    <div className='flex flex-col justify-center my-40 items-center text-center'>
-      <h1 className='my-10 border-4 p-10'><Link href="/firstpage">Add data</Link></h1>
-      <h1 className='my-7 border-4 p-10'><Link href="/secondpage">Display Data</Link></h1>
+    <div className='flex  flex-col justify-center my-40 items-center text-center'>
+      <h1 className='my-10 hover:bg-green-500 border-4 p-10'><Link href="/firstpage">Add data</Link></h1>
+      <h1 className='my-7 hover:bg-green-500 border-4 p-10'><Link href="/secondpage">Display Data</Link></h1>
     </div>
   )
 }

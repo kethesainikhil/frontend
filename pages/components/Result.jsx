@@ -1,12 +1,15 @@
+import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 const Result = () => {
     const [loading, setLoading] = useState(true);
     const selector = useSelector((state) => state.userData);
-
+    const router = useRouter();
     useEffect(() => {
+        console.log(selector?.output,"selcto output")
         if (selector?.currentOutput) {
+            
             setLoading(false);
         }
     }, [selector]);
@@ -22,9 +25,13 @@ const Result = () => {
             </div>
         );
     }
+    const handleClick = () =>{
+        router.push("/firstpage")
+    }
 
     return (
-        <div className="flex flex-col justify-evenly">
+        <div>
+            <div className="flex flex-col justify-evenly">
             <div className="border-white flex flex-wrap border-4 py-10">
                 <h1 className="break-all my-auto text-white font-medium text-xl text-center">
                     {selector?.currentOutput?.data?.stdout}
@@ -35,6 +42,10 @@ const Result = () => {
                     {selector?.currentOutput?.data?.status?.description}
                 </h1>
             </div>
+        </div>
+        <div>
+            <button className='my-10 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick={handleClick} >GO Back</button>
+        </div>
         </div>
     );
 };
