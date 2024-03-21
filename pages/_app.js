@@ -5,9 +5,10 @@ import "../styles/globals.css";
 function MyApp({ Component, pageProps }) {
   return (
     <Provider store={store}>
+
       <Component {...pageProps} />
     </Provider>
-  );
+  );a
 }
 
 export default MyApp;
