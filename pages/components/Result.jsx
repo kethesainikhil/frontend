@@ -33,12 +33,12 @@ const Result = () => {
         <div>
             <div className="flex flex-col justify-evenly">
             <div className="border-white flex flex-wrap border-4 py-10">
-                <h1 className="break-all my-auto text-white font-medium text-xl text-center">
+                <h1 className="break-all my-auto  font-medium text-xl text-center">
                     {selector?.currentOutput?.data?.stdout}
                 </h1>
             </div>
             <div className="border-white border-4 py-10">
-                <h1 className="my-auto break-all text-white font-medium text-xl text-center">
+                <h1 className="my-auto break-all font-medium text-xl text-center">
                     {selector?.currentOutput?.data?.status?.description}
                 </h1>
             </div>
